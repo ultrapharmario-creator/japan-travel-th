@@ -30,13 +30,22 @@ document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',(
 $('#categories').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;document.querySelectorAll('[data-category]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});render()});
 $('#search').addEventListener('input',render);
 $('#cards').addEventListener('click',e=>{const save=e.target.closest('[data-save]'),listen=e.target.closest('[data-listen]');if(save){const id=Number(save.dataset.save);saved.has(id)?saved.delete(id):saved.add(id);write('tabi-saved',[...saved]);render();const restored=document.querySelector(`[data-save="${id}"]`);if(restored)restored.focus();else $('#list-title').scrollIntoView({block:'nearest'})}if(listen)speak(phrases[Number(listen.dataset.listen)].jp)});
-let currentAudio=null;
+let currentAudio=null,playbackSpeed=1;
+function togglePlaybackSpeed(){
+ playbackSpeed=playbackSpeed===1?0.8:1;
+ const slow=playbackSpeed!==1;
+ $('#slow-toggle').setAttribute('aria-pressed',String(slow));
+ $('#slow-toggle').textContent=slow?'ใช้ความเร็วปกติ':'ฟังช้า';
+ $('#speed-label').textContent=slow?'ความเร็วเสียง: ช้า (0.8×)':'ความเร็วเสียง: ปกติ';
+ if(currentAudio)currentAudio.playbackRate=playbackSpeed;
+}
+$('#slow-toggle').addEventListener('click',togglePlaybackSpeed);
 function speak(text){
  const phrase=phrases.find(p=>p.jp===text);if(!phrase)return;
  if(currentAudio){currentAudio.onplaying=null;currentAudio.onerror=null;currentAudio.pause()}
  const panel=$('#audio-panel'),player=$('#audio-player');
  panel.hidden=false;$('#audio-title').textContent=phrase.jp+' • '+phrase.romaji;
- player.src='audio/phrase-'+phrase.id+'.mp3';player.playbackRate=Number($('#speed').value);player.volume=1;player.muted=false;currentAudio=player;
+ player.src='audio/phrase-'+phrase.id+'.mp3';player.playbackRate=playbackSpeed;player.volume=1;player.muted=false;currentAudio=player;
  notify('กำลังโหลดเสียงญี่ปุ่น…');
  player.onplaying=()=>notify('กำลังเล่นเสียง • หากไม่ได้ยิน ให้เพิ่มเสียงและตรวจสอบ Bluetooth');
  player.onerror=()=>notify('โหลดเสียงไม่ได้ กรุณาตรวจอินเทอร์เน็ตแล้วแตะฟังอีกครั้ง');
@@ -53,3 +62,4 @@ function answer(id){if(quiz.answered)return;quiz.answered=true;const q=quiz.ques
 function finishQuiz(){const value=read('tabi-best',{}),best=value&&typeof value==='object'&&!Array.isArray(value)?value:{};best[quiz.category]=Math.max(Number(best[quiz.category])||0,quiz.score);write('tabi-best',best);$('#quiz-game').innerHTML=`<div class="quiz-box" style="text-align:center"><div class="eyebrow">PRACTICE MAKES PROGRESS</div><h2>ฝึกครบแล้ว เก่งขึ้นอีกนิด!</h2><div class="result-score">${quiz.score}<small style="font-size:25px"> / 10</small></div><p>${quiz.score>=8?'พร้อมเที่ยวแล้ว! ลองฝึกหมวดอื่นต่อเลย':'ลองฟังและพูดตาม แล้วกลับมาทดสอบอีกครั้งได้เสมอ'}</p><p>คะแนนดีที่สุดหมวด${label(quiz.category)}: ${best[quiz.category]}/10</p><button class="primary" id="quiz-again">ฝึกอีกครั้ง ↗</button> <button class="answer" id="quiz-back">เลือกหมวดใหม่</button></div>`;$('#quiz-again').addEventListener('click',startQuiz);$('#quiz-back').addEventListener('click',()=>{$('.quiz-intro').hidden=false;$('#quiz-game').hidden=true;bestScore()})}
 render();bestScore();
 initAdventure();setMode('game');
+
