@@ -23,7 +23,7 @@ function render(){
  $('#result-count').textContent=`${filtered.length} ประโยค • แตะฟัง แล้วลองพูดตาม`;
  $('#cards').innerHTML=filtered.length?filtered.map(p=>`<article class="card"><div class="card-top"><span class="badge">${label(p.category)}</span><button class="save" data-save="${p.id}" aria-pressed="${saved.has(p.id)}" aria-label="${saved.has(p.id)?'ลบ':'บันทึก'}ประโยคโปรด: ${p.meaning}">${saved.has(p.id)?'♥':'♡'}</button></div><h3 class="jp" lang="ja">${p.jp}</h3><p class="romaji" lang="en" style="color:#737b70;font-size:13px;margin:0 0 8px;overflow-wrap:anywhere">${p.romaji}</p><p class="reading">${p.reading}</p><p class="meaning">${p.meaning}</p><button class="listen" data-listen="${p.id}" aria-label="ฟังเสียง: ${p.meaning}">◖)) <span>ฟังเสียงญี่ปุ่น</span></button></article>`).join(''):'<p class="empty">ยังไม่มีประโยคที่ตรงกับเงื่อนไข ลองเปลี่ยนหมวดหรือค้นหาใหม่ได้เลย</p>';
 }
-function setMode(next){mode=next;document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===mode);b.setAttribute('aria-pressed',String(b.dataset.mode===mode))});$('#learn-panel').hidden=mode!=='learn'&&mode!=='saved';$('#quiz-panel').hidden=mode!=='quiz';$('#adventure-panel').hidden=mode!=='game';if(mode==='learn'||mode==='saved')render();else if(mode==='quiz')bestScore()}
+function setMode(next){if(next!=='game')stopClerkAudio();mode=next;document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===mode);b.setAttribute('aria-pressed',String(b.dataset.mode===mode))});$('#learn-panel').hidden=mode!=='learn'&&mode!=='saved';$('#quiz-panel').hidden=mode!=='quiz';$('#adventure-panel').hidden=mode!=='game';if(mode==='learn'||mode==='saved')render();else if(mode==='quiz')bestScore()}
 $('#categories').innerHTML=categories.map(([id,icon,name])=>`<button data-category="${id}" class="${id==='all'?'active':''}" aria-pressed="${id==='all'}">${icon} ${name}</button>`).join('');
 $('#quiz-category').innerHTML=categories.map(([id,icon,name])=>`<option value="${id}">${icon} ${name}</option>`).join('');
 document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
@@ -40,15 +40,17 @@ function togglePlaybackSpeed(){
  if(currentAudio)currentAudio.playbackRate=playbackSpeed;
 }
 $('#slow-toggle').addEventListener('click',togglePlaybackSpeed);
-function speak(text){
+function speak(text,clerk=false){
+ animateClerk(false);
  const phrase=phrases.find(p=>p.jp===text);if(!phrase)return;
  if(currentAudio){currentAudio.onplaying=null;currentAudio.onerror=null;currentAudio.pause()}
  const panel=$('#audio-panel'),player=$('#audio-player');
  panel.hidden=false;$('#audio-title').textContent=phrase.jp+' • '+phrase.romaji;
  player.src='audio/phrase-'+phrase.id+'.mp3';player.playbackRate=playbackSpeed;player.volume=1;player.muted=false;currentAudio=player;
  notify('กำลังโหลดเสียงญี่ปุ่น…');
- player.onplaying=()=>notify('กำลังเล่นเสียง • หากไม่ได้ยิน ให้เพิ่มเสียงและตรวจสอบ Bluetooth');
- player.onerror=()=>notify('โหลดเสียงไม่ได้ กรุณาตรวจอินเทอร์เน็ตแล้วแตะฟังอีกครั้ง');
+ player.onplaying=()=>{animateClerk(clerk);notify('กำลังเล่นเสียง • หากไม่ได้ยิน ให้เพิ่มเสียงและตรวจสอบ Bluetooth')};
+ player.onpause=()=>animateClerk(false);player.onended=()=>animateClerk(false);
+ player.onerror=()=>{animateClerk(false);notify('โหลดเสียงไม่ได้ กรุณาตรวจอินเทอร์เน็ตแล้วแตะฟังอีกครั้ง')};
  player.play().catch(()=>notify('แตะปุ่ม ▶ ในตัวเล่นเสียงด้านบนเพื่อเริ่มฟัง'));
 }
 $('#hero-start').addEventListener('click',()=>{setMode('game');$('.tabs').scrollIntoView({behavior:'smooth',block:'start'})});
