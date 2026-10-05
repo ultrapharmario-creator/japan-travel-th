@@ -61,7 +61,7 @@ function speak(text,clerk=false){
  player.onerror=()=>{animateClerk(false);notify('โหลดเสียงไม่ได้ กรุณาตรวจอินเทอร์เน็ตแล้วแตะฟังอีกครั้ง')};
  player.play().catch(()=>notify('แตะปุ่ม ▶ ในตัวเล่นเสียงด้านบนเพื่อเริ่มฟัง'));
 }
-$('#hero-start').addEventListener('click',()=>{setMode('game');$('.tabs').scrollIntoView({behavior:'smooth',block:'start'})});
+$('#hero-start').addEventListener('click',()=>{setMode('lessons');$('.tabs').scrollIntoView({behavior:'smooth',block:'start'})});
 function shuffle(items){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function bestScore(){const best=read('tabi-best',{});const value=best&&typeof best==='object'?best[$('#quiz-category').value]:null;$('#best-score').textContent=typeof value==='number'?`คะแนนดีที่สุดหมวดนี้: ${value}/10`:'ลองทำครั้งแรก แล้วเก็บสถิติของคุณ'}
 $('#quiz-category').addEventListener('change',bestScore);
@@ -71,5 +71,5 @@ function renderQuestion(){const q=quiz.questions[quiz.index];const options=shuff
 function answer(id){if(quiz.answered)return;quiz.answered=true;const q=quiz.questions[quiz.index],correct=id===q.id;if(correct)quiz.score++;document.querySelectorAll('[data-answer]').forEach(b=>{b.disabled=true;const bid=Number(b.dataset.answer);if(bid===q.id)b.classList.add('correct');else if(bid===id)b.classList.add('wrong')});$('.feedback').textContent=`${correct?'✓ ถูกต้อง!':'ลองจำประโยคนี้ไว้นะ'} ${q.meaning} • ${q.romaji} • ${q.reading}`;$('#quiz-next').hidden=false;$('#quiz-next').focus()}
 function finishQuiz(){const value=read('tabi-best',{}),best=value&&typeof value==='object'&&!Array.isArray(value)?value:{};best[quiz.category]=Math.max(Number(best[quiz.category])||0,quiz.score);write('tabi-best',best);$('#quiz-game').innerHTML=`<div class="quiz-box" style="text-align:center"><div class="eyebrow">PRACTICE MAKES PROGRESS</div><h2>ฝึกครบแล้ว เก่งขึ้นอีกนิด!</h2><div class="result-score">${quiz.score}<small style="font-size:25px"> / 10</small></div><p>${quiz.score>=8?'พร้อมเที่ยวแล้ว! ลองฝึกหมวดอื่นต่อเลย':'ลองฟังและพูดตาม แล้วกลับมาทดสอบอีกครั้งได้เสมอ'}</p><p>คะแนนดีที่สุดหมวด${label(quiz.category)}: ${best[quiz.category]}/10</p><button class="primary" id="quiz-again">ฝึกอีกครั้ง ↗</button> <button class="answer" id="quiz-back">เลือกหมวดใหม่</button></div>`;$('#quiz-again').addEventListener('click',startQuiz);$('#quiz-back').addEventListener('click',()=>{$('.quiz-intro').hidden=false;$('#quiz-game').hidden=true;bestScore()})}
 render();bestScore();
-initLessons();initAdventure();setMode('game');
+initLessons();initAdventure();setMode('lessons');
 
