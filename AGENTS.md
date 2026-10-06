@@ -13,3 +13,6 @@ Distinguish credit cards, electronic money, and transit IC cards visually: chip/
 Keep cash (banknotes/coins), total (adding item prices), and yen (currency symbol/unit) visually distinct.
 
 Level 2 examples must distinguish requests to warm (温めてください / atatamete kudasai) and not to warm (温めないでください / atatamenaide kudasai). For multiple items, match the exact bento count and selection in art and captions; explicitly confirm warming the other two when teaching the single-item exclusion case.
+
+# Audio pronunciation
+When generating warming audio, use the explicit Hiragana inputs in audio/pronunciation-overrides.json with ja-JP-NanamiNeural. Spell 温め… as あたため… (atatame…) and 温かい as あたたかい (atatakai) in TTS input while preserving learner-facing Kanji. Apply this to full sentences, negative forms and requests in both levels. Bump the affected audio cache versions whenever replacing MP3s.
