@@ -5,3 +5,5 @@ This website is for Thai beginners who cannot yet read Japanese. Always include 
 # Illustration style
 
 Keep illustrations consistent with assets/kore-sore-are.png and assets/kono-sono-ano.png: friendly Japanese anime textbook art, warm cream backgrounds, wooden convenience-store interiors, coral-shirt tourist and green-apron clerk. New vocabulary art must show the actual object clearly. Keep Japanese and Romaji captions in HTML rather than generated image text. Preserve accessible labels and mobile readability.
+
+Use specific artwork for distinct meanings: adding extras, giving change, paid versus free, loyalty card versus points, age, verification, adult, takeaway versus eating inside, and one item. Do not substitute generic bowing/payment/bag art for these meanings. Keep objects fully inside each image cell with safe margins so the lunch box cannot be clipped.
