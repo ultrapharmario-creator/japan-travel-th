@@ -18,6 +18,18 @@ rows.push(...[["konbini", "温めます", "อะตะตะเมะมัส"
 romaji.push(...["atatamemasu", "oshiharai", "irimasen", "irimasu", "kudasai", "onegaishimasu", "kashikomarimashita", "otsuke shimasu", "Fukuro wa irimasu"]);
 rows.push(...[["konbini", "レジ", "เระจิ", "จุดชำระเงิน / แคชเชียร์"], ["konbini", "現金", "เก็นคิน", "เงินสด"], ["konbini", "合計", "โกเค", "ยอดรวม"], ["konbini", "円", "เอ็น", "เยน"], ["konbini", "お釣り", "โอะทสึริ", "เงินทอน"], ["konbini", "クレジットカード", "คุเระจิตโตะ คาโดะ", "บัตรเครดิต"], ["konbini", "電子マネー", "เด็นชิ มะเน", "เงินอิเล็กทรอนิกส์"], ["konbini", "交通系ICカード", "โคทซูเค ไอชี คาโดะ", "บัตร IC สำหรับเดินทาง"], ["konbini", "マイバッグ", "ไม บักกุ", "ถุงที่นำมาเอง"], ["konbini", "有料", "ยูเรียว", "มีค่าใช้จ่าย"], ["konbini", "無料", "มุเรียว", "ฟรี / ไม่มีค่าใช้จ่าย"], ["konbini", "スプーン", "สุปูน", "ช้อน"], ["konbini", "フォーク", "โฟคุ", "ส้อม"], ["konbini", "ストロー", "สุโตะโร", "หลอด"], ["konbini", "冷たい", "ทสึเมะไต", "เย็น (เมื่อสัมผัส / อาหารและเครื่องดื่ม)"], ["konbini", "温かい", "อะตะตะไค", "อุ่น (อาหารและเครื่องดื่ม)"], ["konbini", "飲み物", "โนะมิโมะโนะ", "เครื่องดื่ม"], ["konbini", "コップ", "คปปุ", "แก้ว"], ["konbini", "お茶", "โอะฉะ", "ชา"], ["konbini", "コーヒー", "โคฮี", "กาแฟ"], ["konbini", "パン", "ปัง", "ขนมปัง"], ["konbini", "サンドイッチ", "ซันโดะอิจจิ", "แซนด์วิช"], ["konbini", "ポイント", "พอยน์โตะ", "คะแนนสะสม"], ["konbini", "ポイントカード", "พอยน์โตะ คาโดะ", "บัตรสะสมคะแนน"], ["konbini", "アプリ", "อะปุริ", "แอปพลิเคชัน"], ["konbini", "年齢", "เน็นเร", "อายุ"], ["konbini", "確認", "คะคุนิน", "การตรวจสอบ / ยืนยัน"], ["konbini", "成人", "เซจิน", "ผู้ใหญ่ / ผู้บรรลุนิติภาวะ"], ["konbini", "お持ち帰り", "โอะโมะจิคะเอะริ", "นำกลับ / ซื้อกลับ"], ["konbini", "店内", "เท็นไน", "ภายในร้าน"], ["konbini", "一膳", "อิจิเซ็น", "หนึ่งคู่ (ลักษณนามสำหรับตะเกียบ)"], ["konbini", "一つ", "ฮิโทะทสึ", "หนึ่งชิ้น / หนึ่งอัน"]]);
 romaji.push(...["reji", "genkin", "goukei", "en", "otsuri", "kurejitto kaado", "denshi manee", "koutsuukei ai shii kaado", "mai baggu", "yuuryou", "muryou", "supuun", "fooku", "sutoroo", "tsumetai", "atatakai", "nomimono", "koppu", "ocha", "koohii", "pan", "sandoicchi", "pointo", "pointo kaado", "apuri", "nenrei", "kakunin", "seijin", "omochikaeri", "tennai", "ichizen", "hitotsu"]);
+rows.push(...[
+ ['konbini','この','โคะโนะ','นี้ (ต้องตามด้วยชื่อสิ่งของ)'],
+ ['konbini','その','โซะโนะ','นั้น (ต้องตามด้วยชื่อสิ่งของ)'],
+ ['konbini','あの','อะโนะ','โน้น (ต้องตามด้วยชื่อสิ่งของ)'],
+ ['konbini','を','โอะ','คำช่วยบอกสิ่งที่เราขอหรือกระทำต่อ'],
+ ['konbini','このお弁当','โคะโนะ โอะเบ็นโต','ข้าวกล่องนี้'],
+ ['konbini','そのお弁当','โซะโนะ โอะเบ็นโต','ข้าวกล่องนั้น'],
+ ['konbini','あのお弁当','อะโนะ โอะเบ็นโต','ข้าวกล่องโน้น'],
+ ['konbini','そのお弁当をください','โซะโนะ โอะเบ็นโต โอะ คุดะไซ','ขอข้าวกล่องนั้น'],
+ ['konbini','あのお弁当をください','อะโนะ โอะเบ็นโต โอะ คุดะไซ','ขอข้าวกล่องโน้น']
+]);
+romaji.push('kono','sono','ano','o','Kono obentou','Sono obentou','Ano obentou','Sono obentou o kudasai','Ano obentou o kudasai');
 const phrases=rows.map((r,id)=>({id,category:r[0],jp:r[1],reading:r[2],meaning:r[3],romaji:romaji[id]}));
 const $=s=>document.querySelector(s);
 function read(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}}

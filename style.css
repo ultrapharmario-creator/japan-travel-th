@@ -23,3 +23,5 @@
 .pointing-image{display:block;width:300%;max-width:none;height:auto}
 .pointing-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-top:12px;font-size:16px;line-height:1.8}
 @media(max-width:600px){.pointing-legend{font-size:15px;justify-content:flex-start}}
+
+.request-lessons{margin:36px 0}.request-bento{max-width:220px;margin:16px auto}.request-bento svg{width:100%;height:auto}.request-formula{font-size:20px;line-height:2;overflow-wrap:anywhere;background:#eaf0e4;border-radius:12px;padding:18px}.request-formula span{font-size:16px}.request-listen{display:flex;flex-wrap:wrap;gap:12px}.request-lessons .listen{padding:12px 16px;white-space:normal;overflow-wrap:anywhere}.request-lessons .romaji{overflow-wrap:anywhere}
