@@ -28,3 +28,6 @@ The bento override applies to both the standalone sentence-building lesson and v
 ## Cash, total and currency
 
 `vocabulary-money.webp` has three equal columns: physical banknotes/coins for 現金 (genkin), adding item prices at checkout for 合計 (goukei), and the ¥ symbol/Japanese coin for 円 (en). Specific mappings for IDs 77–79 use three columns and one row. All existing audio IDs, Thai readings and Romaji remain unchanged.
+
+## Requests and questions in context
+`vocabulary-requests.webp` is a 3-column, 2-row sheet. Top row: requesting bento by name, pointing to a bottle near the customer, choosing one particular bento. Bottom row: clerk asking about a bag, clerk offering to warm bento while pointing at the microwave, customer requesting a bag from the clerk. Preserve the portrait 2:3 cell aspect ratio, and keep captions in HTML.
