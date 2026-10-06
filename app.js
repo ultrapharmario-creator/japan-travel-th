@@ -36,6 +36,8 @@ rows.push(['konbini','お弁当は温めますか','โอะเบ็นโต 
 romaji.push('Obentou wa atatamemasu ka');
 rows.push(['konbini','いいえ、大丈夫です','อีเอะ ไดโจบุ เดส','ไม่เป็นไร ไม่ต้องก็ได้ (ตอบปฏิเสธข้อเสนอ)'],['konbini','いいえ、結構です','อีเอะ เค็กโค เดส','ไม่รับครับ/ค่ะ ขอบคุณ (ตอบปฏิเสธข้อเสนอ)']);
 romaji.push('Iie, daijoubu desu','Iie, kekkou desu');
+rows.push(['konbini','袋はいりますか','ฟุคุโระ วะ อิริมัสกะ','ต้องการถุงไหม?']);
+romaji.push('Fukuro wa irimasu ka');
 const phrases=rows.map((r,id)=>({id,category:r[0],jp:r[1],reading:r[2],meaning:r[3],romaji:romaji[id]}));
 const $=s=>document.querySelector(s);
 function read(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}}
