@@ -9,3 +9,5 @@ Keep illustrations consistent with assets/kore-sore-are.png and assets/kono-sono
 Use specific artwork for distinct meanings: adding extras, giving change, paid versus free, loyalty card versus points, age, verification, adult, takeaway versus eating inside, and one item. Do not substitute generic bowing/payment/bag art for these meanings. Keep objects fully inside each image cell with safe margins so the lunch box cannot be clipped.
 
 Distinguish credit cards, electronic money, and transit IC cards visually: chip/bank card, digital-wallet payment, and transit-gate tap respectively. A phone is only one example of electronic money; do not imply all electronic money requires a phone.
+
+Keep cash (banknotes/coins), total (adding item prices), and yen (currency symbol/unit) visually distinct.

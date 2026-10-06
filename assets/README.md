@@ -24,3 +24,7 @@ The bento override applies to both the standalone sentence-building lesson and v
 ## Payment methods
 
 `vocabulary-payment-methods.webp` has three equal columns in one row: blue chip credit card, phone digital-wallet/contactless payment, and a transit IC card tapping at a station gate. The specific mappings for IDs 81, 82, and 83 use grid metadata (3 columns, 1 row); all existing two-by-two mappings retain their defaults. Electronic money may also be stored on cards: the phone scene is an illustrative example. Existing audio and Romaji are unchanged.
+
+## Cash, total and currency
+
+`vocabulary-money.webp` has three equal columns: physical banknotes/coins for 現金 (genkin), adding item prices at checkout for 合計 (goukei), and the ¥ symbol/Japanese coin for 円 (en). Specific mappings for IDs 77–79 use three columns and one row. All existing audio IDs, Thai readings and Romaji remain unchanged.
