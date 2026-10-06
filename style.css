@@ -42,3 +42,6 @@
 
 .request-patterns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}.request-pattern{min-width:0;display:flex;flex-direction:column;background:#fff7e8;border:1px solid #e5d6c5;border-radius:14px;padding:20px;overflow-wrap:anywhere}.request-pattern h4{font-size:21px;line-height:1.7;margin:0 0 12px}.request-pattern .jp{font-size:27px;margin:8px 0}.request-pattern .romaji{font-size:20px;line-height:1.8}.request-pattern p,.request-pattern strong{font-size:18px;line-height:1.9}.request-pattern .listen{margin-top:auto;width:100%;font-size:18px}
 @media(max-width:900px){.request-patterns{grid-template-columns:minmax(0,1fr)}}
+
+/* Space each explanation, audio control, and example in the request lesson. */
+.request-lessons .pointing-box>.lesson-note{margin:20px 0;line-height:2}.request-lessons .pointing-box>.listen{margin:20px 0;line-height:1.8}.request-lessons .pointing-box>.request-pattern{margin:24px 0}.request-lessons .pointing-box>:last-child{margin-bottom:0}.request-pattern p{margin:10px 0;line-height:2}.request-pattern .jp{margin:12px 0 8px;line-height:1.8}.request-pattern .reading{margin-bottom:16px}.request-pattern strong{display:block;margin:4px 0 10px}.request-pattern .listen{margin-top:20px;line-height:1.8}
