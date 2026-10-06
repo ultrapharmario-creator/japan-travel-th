@@ -36,3 +36,6 @@ The bento override applies to both the standalone sentence-building lesson and v
 
 ## Accepting and declining offers
 `vocabulary-responses.webp` is a 3x2 atlas of square scenes: top row accepting warming, gently declining warming, politely declining warming; bottom row accepting a store bag, declining while showing a reusable tote, declining with a backpack already ready. Captions explain response context; all audio uses ja-JP-NanamiNeural. Use the same reusable tote artwork for generic 袋 (fukuro) in grammar and vocabulary, and the distinct store plastic bag for レジ袋 (rejibukuro). The tote is only an example of generic bags.
+
+## Cold versus beverages versus water
+`vocabulary-drink-meanings.webp` contains two square panels: an iced drink with condensation, cold symbols and a fingertip touching the glass for 冷たい (tsumetai); a group of juice, milk, tea and soda for 飲み物 (nomimono). 水 (mizu) retains its separate plain-water bottle. IDs 90 and 92 use distinct mappings and preserve their original audio.
