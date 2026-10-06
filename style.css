@@ -17,3 +17,9 @@
 .vocab-card h4,.pointing-caption h4,.word-example p,.game-answer,.npc-bubble p{overflow-wrap:anywhere}
 .tabs button{line-height:1.6}
 @media(max-width:600px){.vocab-grid{grid-template-columns:minmax(0,1fr)}.sound-toolbar{flex-wrap:wrap}.pointing-caption .jp{font-size:25px}}
+
+.pointing-figure{max-width:560px;margin:20px auto 0}
+.pointing-image-window{overflow:hidden;border-radius:14px;background:#fff9e7}
+.pointing-image{display:block;width:300%;max-width:none;height:auto}
+.pointing-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-top:12px;font-size:16px;line-height:1.8}
+@media(max-width:600px){.pointing-legend{font-size:15px;justify-content:flex-start}}
