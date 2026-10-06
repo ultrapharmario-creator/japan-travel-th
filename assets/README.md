@@ -20,3 +20,7 @@ These three square sheets each have two columns and two rows. `specificArt` in l
 - `vocabulary-food.webp`: top-left fully visible bento with safe space around its edges; top-right leaving the store with takeaway; bottom-left seated eating inside; bottom-right one onigiri with a numeral 1.
 
 The bento override applies to both the standalone sentence-building lesson and vocabulary cards, as well as the game counter. Existing audio IDs and Romaji remain unchanged.
+
+## Payment methods
+
+`vocabulary-payment-methods.webp` has three equal columns in one row: blue chip credit card, phone digital-wallet/contactless payment, and a transit IC card tapping at a station gate. The specific mappings for IDs 81, 82, and 83 use grid metadata (3 columns, 1 row); all existing two-by-two mappings retain their defaults. Electronic money may also be stored on cards: the phone scene is an illustrative example. Existing audio and Romaji are unchanged.

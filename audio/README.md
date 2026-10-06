@@ -16,3 +16,5 @@ Playback adds `?v=3` to these files to invalidate the earlier fallback voice. Th
 ## Request-building lessons
 
 Files phrase-108.mp3 through phrase-116.mp3 use the same Nanami voice and default settings. Inputs in order: この (kono), その (sono), あの (ano), お (o, to explicitly pronounce the particle を as o), このお弁当 (kono obentou), そのお弁当 (sono obentou), あのお弁当 (ano obentou), そのお弁当をください (Sono obentou o kudasai), あのお弁当をください (Ano obentou o kudasai). The existing phrase-42.mp3 supplies このお弁当をください (Kono obentou o kudasai).
+
+`phrase-117.mp3`: お弁当をください (Obentou o kudasai), synthesized with Nanami at default settings for the request-by-name comparison.
