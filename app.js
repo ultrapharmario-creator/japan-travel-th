@@ -54,7 +54,7 @@ function speak(text,clerk=false){
  if(currentAudio){currentAudio.onplaying=null;currentAudio.onerror=null;currentAudio.pause()}
  const panel=$('#audio-panel'),player=$('#audio-player');
  panel.hidden=false;$('#audio-title').textContent=phrase.jp+' • '+phrase.romaji+' • '+phrase.reading;
- player.src='audio/phrase-'+phrase.id+'.mp3'+([37,49,67,91].includes(phrase.id)?'?v=2':'');player.playbackRate=playbackSpeed;player.volume=1;player.muted=false;currentAudio=player;
+ player.src='audio/phrase-'+phrase.id+'.mp3'+([37,49,67,91].includes(phrase.id)?'?v=3':'');player.playbackRate=playbackSpeed;player.volume=1;player.muted=false;currentAudio=player;
  notify('กำลังโหลดเสียงญี่ปุ่น…');
  player.onplaying=()=>{animateClerk(clerk);notify('กำลังเล่นเสียง • หากไม่ได้ยิน ให้เพิ่มเสียงและตรวจสอบ Bluetooth')};
  player.onpause=()=>animateClerk(false);player.onended=()=>animateClerk(false);
