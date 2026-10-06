@@ -33,3 +33,6 @@ The bento override applies to both the standalone sentence-building lesson and v
 `vocabulary-requests.webp` is a 3-column, 2-row sheet. Top row: requesting bento by name, pointing to a bottle near the customer, choosing one particular bento. Bottom row: clerk asking about a bag, clerk offering to warm bento while pointing at the microwave, customer requesting a bag from the clerk. Preserve the portrait 2:3 cell aspect ratio, and keep captions in HTML.
 
 `vocabulary-requests-square.webp` supersedes the portrait sheet in the UI. It keeps the same six scenes in a landscape 3:2 atlas with square cells. Lesson and vocabulary illustrations share a 200px square maximum (190px on mobile). Preserve the older sheet and generated originals.
+
+## Accepting and declining offers
+`vocabulary-responses.webp` is a 3x2 atlas of square scenes: top row accepting warming, gently declining warming, politely declining warming; bottom row accepting a store bag, declining while showing a reusable tote, declining with a backpack already ready. Captions explain response context; all audio uses ja-JP-NanamiNeural. Use the same reusable tote artwork for generic 袋 (fukuro) in grammar and vocabulary, and the distinct store plastic bag for レジ袋 (rejibukuro). The tote is only an example of generic bags.
