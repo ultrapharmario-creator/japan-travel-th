@@ -32,6 +32,8 @@ rows.push(...[
 romaji.push('kono','sono','ano','o','Kono obentou','Sono obentou','Ano obentou','Sono obentou o kudasai','Ano obentou o kudasai');
 rows.push(['konbini','お弁当をください','โอะเบ็นโต โอะ คุดะไซ','ขอข้าวกล่อง']);
 romaji.push('Obentou o kudasai');
+rows.push(['konbini','お弁当は温めますか','โอะเบ็นโต วะ อะตะตะเมะมัสกะ','ส่วนข้าวกล่อง ให้อุ่นไหม?']);
+romaji.push('Obentou wa atatamemasu ka');
 const phrases=rows.map((r,id)=>({id,category:r[0],jp:r[1],reading:r[2],meaning:r[3],romaji:romaji[id]}));
 const $=s=>document.querySelector(s);
 function read(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}}
