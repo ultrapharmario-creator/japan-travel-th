@@ -39,3 +39,6 @@ The bento override applies to both the standalone sentence-building lesson and v
 
 ## Cold versus beverages versus water
 `vocabulary-drink-meanings.webp` contains two square panels: an iced drink with condensation, cold symbols and a fingertip touching the glass for 冷たい (tsumetai); a group of juice, milk, tea and soda for 飲み物 (nomimono). 水 (mizu) retains its separate plain-water bottle. IDs 90 and 92 use distinct mappings and preserve their original audio.
+
+## Level 2: choosing which bento to warm
+`vocabulary-warming-level-two.webp` has four square cells (2x2): change of mind (no warming to warming), two bentos with only red warmed, three bentos with only blue warmed, and three bentos with only blue excluded while red/yellow are warmed. Orange heat symbols mean warming; red crosses mean no warming. The final scene sheet has exactly two and three boxes in the respective scenes; do not add duplicates in the clerk hands or microwave. All four use the original 200px square maximum, 190px mobile.
