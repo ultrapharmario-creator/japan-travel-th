@@ -49,3 +49,5 @@ The bento override applies to both the standalone sentence-building lesson and v
 `vocabulary-level-two-basics-corrected.webp` uses a 2x2 grid with broad cream margins and no panel borders: customer requests warming (top left), exactly two plain bento boxes (top right), exactly three plain bento boxes (bottom left), customer requests no warming (bottom right). Use these for Atatamete kudasai, futatsu, mittsu and Atatamenaide kudasai; keep the separate selection scenes for warming-choice exercises.
 
 `vocabulary-customer-request-warming.webp` replaces ask-to-warm with a standalone square: customer points directly at the microwave door while asking to warm the bento. The Level 2 change-of-mind lesson uses separate scene rows: warm-decline-gentle alongside the initial refusal, then change-warming alongside the later warming request.
+
+`vocabulary-remaining-two.webp` illustrates 他の二つ (hoka no futatsu): the remaining red/yellow pair is highlighted and grouped, while the selected blue box is separated. Use it for the hoka no explanation and the remaining-two warming request. It teaches the reference group, not another no-warming instruction.

@@ -42,6 +42,8 @@ rows.push(...[["konbini", "温めなくて大丈夫です", "อะตะตะ�
 romaji.push(...["Atatamenakute daijoubu desu", "Sumimasen, yappari atatamete kudasai", "Kochira wa atatamete, kochira wa atatamenaide kudasai", "Kore dake atatamete kudasai", "Kore dake atatamenaide kudasai", "Hoka no futatsu wa atatamete kudasai", "Atatamete kudasai", "Atatamenaide kudasai", "dake", "yappari", "kochira", "futatsu", "mittsu"]);
 rows.push(...[["konbini", "他の", "โฮะคะ โนะ", "อื่น / ที่เหลือ (ต้องมีคำตามหลังในรูปแบบนี้)"], ["konbini", "他の二つ", "โฮะคะ โนะ ฟุตะทสึ", "อีกสองอัน / สองอันที่เหลือ"], ["konbini", "他のお弁当", "โฮะคะ โนะ โอะเบ็นโต", "ข้าวกล่องอื่น ๆ"], ["konbini", "他の飲み物", "โฮะคะ โนะ โนะมิโมะโนะ", "เครื่องดื่มอื่น ๆ"]]);
 romaji.push(...["hoka no", "Hoka no futatsu", "Hoka no obentou", "Hoka no nomimono"]);
+rows.push(['konbini','こちらだけ温めてください','โคะจิระ ดะเคะ อะตะตะเมะเตะ คุดะไซ','อุ่นเฉพาะอันนี้ให้ด้วย (ใช้คำชี้สุภาพ)']);
+romaji.push('Kochira dake atatamete kudasai');
 const phrases=rows.map((r,id)=>({id,category:r[0],jp:r[1],reading:r[2],meaning:r[3],romaji:romaji[id]}));
 const $=s=>document.querySelector(s);
 function read(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}}
@@ -78,7 +80,7 @@ function speak(text,clerk=false){
  if(currentAudio){currentAudio.onplaying=null;currentAudio.onerror=null;currentAudio.pause()}
  const panel=$('#audio-panel'),player=$('#audio-player');
  panel.hidden=false;$('#audio-title').textContent=phrase.jp+' • '+phrase.romaji+' • '+phrase.reading;
- player.src='audio/phrase-'+phrase.id+'.mp3'+([37,49,67,91,118,122,123,124,125,126,127,128,129].includes(phrase.id)?'?v=4':'');player.playbackRate=playbackSpeed;player.volume=1;player.muted=false;currentAudio=player;
+ player.src='audio/phrase-'+phrase.id+'.mp3'+([37,49,67,91,118,122,123,124,125,126,127,128,129,139].includes(phrase.id)?'?v=4':'');player.playbackRate=playbackSpeed;player.volume=1;player.muted=false;currentAudio=player;
  notify('กำลังโหลดเสียงญี่ปุ่น…');
  player.onplaying=()=>{animateClerk(clerk);notify('กำลังเล่นเสียง • หากไม่ได้ยิน ให้เพิ่มเสียงและตรวจสอบ Bluetooth')};
  player.onpause=()=>animateClerk(false);player.onended=()=>animateClerk(false);
