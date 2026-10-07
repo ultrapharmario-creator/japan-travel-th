@@ -42,3 +42,5 @@ The bento override applies to both the standalone sentence-building lesson and v
 
 ## Level 2: choosing which bento to warm
 `vocabulary-warming-level-two.webp` has four square cells (2x2): change of mind (no warming to warming), two bentos with only red warmed, three bentos with only blue warmed, and three bentos with only blue excluded while red/yellow are warmed. Orange heat symbols mean warming; red crosses mean no warming. The final scene sheet has exactly two and three boxes in the respective scenes; do not add duplicates in the clerk hands or microwave. All four use the original 200px square maximum, 190px mobile.
+
+`vocabulary-warming-decline-fixed.webp` is the standalone square replacement for the warm-decline-gentle scene, used for both the gentle refusal in Level 1 and 温めなくて大丈夫です (Atatamenakute daijoubu desu) in Level 2. It corrects the raised palm, fingers, wrist and arm attachment. Use a single-cell mapping with 0% 0% position and 100% 100% size.
