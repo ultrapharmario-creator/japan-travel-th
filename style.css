@@ -84,3 +84,5 @@
 .warming-negative-comparison{margin-top:28px;border-top:1px solid var(--line);padding-top:24px}.warming-negative-comparison>h4{font-size:21px;line-height:1.8;margin:0 0 18px}.warming-negative-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.warming-negative-options>article{min-width:0;padding:20px;background:#fff7e8;border:1px solid #e5d6c5;border-radius:12px;overflow-wrap:anywhere}.warming-negative-options .word-art{margin:0 auto 20px}.warming-negative-options>article>p{font-size:18px;line-height:1.9;margin:18px 0 0}@media(max-width:900px){.warming-negative-options{grid-template-columns:minmax(0,1fr)}}
 
 .level-two-basics>article{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:18px;align-items:start}.level-two-basics>article>.word-art{margin:0}.level-two-basics>article>div{min-width:0}@media(max-width:900px){.level-two-basics{grid-template-columns:minmax(0,1fr)}}@media(max-width:600px){.level-two-basics>article{grid-template-columns:minmax(0,1fr)}.level-two-basics>article>.word-art{margin:auto}}
+
+.change-mind-step+.change-mind-step{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
