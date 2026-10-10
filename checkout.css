@@ -6,7 +6,7 @@
 #level-three h4{font-size:21px;line-height:1.6;margin:12px 0}#level-three .lesson-note{line-height:1.8;margin-top:16px}#checkout-practice>.word-art{margin:12px auto}#checkout-practice .listen{width:100%;padding:10px 12px;font-size:18px;line-height:1.6;white-space:normal}#checkout-practice .primary{margin-top:14px}#checkout-practice .answer{overflow-wrap:anywhere;line-height:1.6}#checkout-practice [role=status] p{margin:8px 0;line-height:1.7}
 @media(max-width:600px){.checkout-number-grid{grid-template-columns:minmax(0,1fr)}.checkout-example{grid-template-columns:minmax(0,1fr)}.checkout-example>.word-art{margin:auto}}
 
-.checkout-art{width:100%;max-width:200px;aspect-ratio:1;background-image:url('assets/checkout-scenes.webp');background-size:300% 200%;border-radius:10px;border:1px solid #e5d6c5;flex-shrink:0}
+.checkout-art{width:100%;max-width:200px;aspect-ratio:2 / 3;background-image:url('assets/checkout-scenes.webp');background-size:300% 200%;border-radius:10px;border:1px solid #e5d6c5;flex-shrink:0}
 .checkout-price-picture{width:200px;max-width:100%;margin:0 auto 12px;border-radius:10px;background:#fff;border:1px solid #e5d6c5;overflow:hidden}
 .checkout-price-picture .checkout-art{width:100%;border:0;border-radius:0}
 .checkout-price-picture figcaption{text-align:center;font-weight:700;font-size:22px;padding:4px;color:#173d48}
@@ -15,4 +15,4 @@
 #checkout-practice>.checkout-art{margin:12px auto}
 @media(max-width:600px){.checkout-example>.checkout-art{margin:auto}.checkout-price-picture,.checkout-art{max-width:190px}}
 
-.checkout-art{position:relative;overflow:hidden;background-image:none}.checkout-art>span{position:absolute;left:0;top:-25%;width:100%;height:150%;background-image:url('assets/checkout-scenes.webp');background-size:300% 200%;background-repeat:no-repeat}
+.checkout-art{position:relative;overflow:hidden;background-image:none}.checkout-art>span{position:absolute;left:0;top:0;width:100%;height:100%;background-image:url('assets/checkout-scenes.webp');background-size:300% 200%;background-repeat:no-repeat}
