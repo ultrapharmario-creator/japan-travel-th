@@ -96,3 +96,19 @@
 .dake-word-choice{margin:24px 0;padding:18px;background:#efeedd;border-radius:12px;overflow-wrap:anywhere}.dake-word-choice h4{font-size:21px;line-height:1.8;margin:0 0 14px}.dake-word-choice p{font-size:19px;line-height:1.9;margin:12px 0 0}
 
 .dake-word-choice .listen{margin:18px 0 0;padding:12px 16px;font-size:18px;line-height:1.8;white-space:normal;overflow-wrap:anywhere}
+
+/* Compact level-two dialogue and show both pointing gestures. */
+#level-two .level-two-scene{gap:18px}
+#level-two .level-two-speaker{line-height:1.5;margin-bottom:6px}
+#level-two .level-two-phrase p{line-height:1.6;margin:5px 0}
+#level-two .level-two-phrase .jp{line-height:1.5;margin:6px 0}
+#level-two .level-two-phrase .listen{margin-top:10px;padding:9px 14px;line-height:1.5;min-height:44px}
+#level-two .change-mind-step+.change-mind-step{margin-top:16px;padding-top:16px}
+#level-two .lesson-note{margin-top:16px;padding:14px 16px;line-height:1.7}
+#level-two .level-two-result{margin-top:12px;padding:12px 14px;line-height:1.6}
+.bento-pointing-sequence{display:grid;gap:12px}
+.bento-pointing-sequence figure{margin:0;min-width:0}
+.bento-pointing-sequence .word-art{width:100%;margin:0}
+.blue-bento-image{display:block;width:100%;height:auto;aspect-ratio:1;border:1px solid #e5d6c5;border-radius:8px}
+.bento-pointing-sequence figcaption{font-size:15px;line-height:1.5;margin-top:6px}
+@media(max-width:600px){#level-two .level-two-scene{gap:12px}.bento-pointing-sequence{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bento-pointing-sequence figcaption{font-size:13px}}
