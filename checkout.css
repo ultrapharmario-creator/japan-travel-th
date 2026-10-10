@@ -16,3 +16,7 @@
 @media(max-width:600px){.checkout-example>.checkout-art{margin:auto}.checkout-price-picture,.checkout-art{max-width:190px}}
 
 .checkout-art{position:relative;overflow:hidden;background-image:none}.checkout-art>span{position:absolute;left:0;top:0;width:100%;height:100%;background-image:url('assets/checkout-scenes.webp');background-size:300% 200%;background-repeat:no-repeat}
+
+.checkout-product-art{width:100%;max-width:200px;aspect-ratio:1;background-image:url('assets/checkout-price-products.webp');background-size:500% 300%;background-repeat:no-repeat;border-radius:10px}
+.checkout-price-picture{border:0;background:transparent;overflow:visible}.checkout-price-picture figcaption{font-size:17px;line-height:1.5;padding:6px 0}.checkout-price-picture .checkout-product-art{margin:auto}
+@media(max-width:600px){.checkout-product-art{max-width:190px}}
