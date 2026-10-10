@@ -16,3 +16,5 @@
 .shop-player[data-facing=right] .shop-topdown-person{transform:rotate(90deg)}.shop-player[data-facing=down] .shop-topdown-person{transform:rotate(180deg)}.shop-player[data-facing=left] .shop-topdown-person{transform:rotate(-90deg)}
 .shop-location-label{position:absolute;background:#fffdf2e8;color:#29473c;font-weight:700;font-size:clamp(8px,1.5vw,14px);border-radius:6px;padding:3px 6px;box-shadow:0 1px 4px #0002;pointer-events:none}.shop-bento-label{left:20%;top:8%}.shop-counter-label{left:65%;top:20%}.shop-exit-label{left:40%;bottom:5%}
 @media(max-width:600px){.shop-board-art .shop-player-label{font-size:8px;padding:0 2px}.shop-location-label{font-size:8px;padding:2px 3px}}
+
+.shop-board-art .shop-player{transition:none;will-change:left,top}
