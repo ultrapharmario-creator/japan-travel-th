@@ -23,7 +23,7 @@ const checkoutRows=[
  ['レシートをお願いします','Reshiito o onegaishimasu','เระชีโตะ โอะ โอะเนะไกชิมัส','ขอใบเสร็จด้วย','レシートをおねがいします']
 ];
 function checkoutPhrase(index){return phrases.find(p=>p.jp===checkoutRows[index][0])}
-function checkoutPicture(kind,label){const cells={price:[0,0],total:[1,0],cash:[2,0],'credit-card':[0,1],'loyalty-card':[1,1],change:[2,1],receipt:[2,1]};const [x,y]=cells[kind]||cells.price;return `<div class="checkout-art" role="img" aria-label="${label}" style="background-position:${x*50}% ${y*100}%"></div>`}
+function checkoutPicture(kind,label){const cells={price:[0,0],total:[1,0],cash:[2,0],'credit-card':[0,1],'loyalty-card':[1,1],change:[2,1],receipt:[2,1]};const [x,y]=cells[kind]||cells.price;return `<div class="checkout-art" role="img" aria-label="${label}" ><span aria-hidden="true" style="background-position:${x*50}% ${y*100}%"></span></div>`}
 function checkoutPricePicture(index){const prices=[100,200,300,400,500,600,700,800,900,1000,350,580,1200,3000,8000];return index<15?`<figure class="checkout-price-picture">${checkoutPicture('price','สินค้าและป้ายราคา')}<figcaption>¥${prices[index].toLocaleString('en-US')}</figcaption></figure>`:''}
 function checkoutCard(index){const p=checkoutPhrase(index);return `<article class="checkout-card">${checkoutPricePicture(index)}<strong>${p.meaning}</strong><p class="jp" lang="ja">${p.jp}</p><p class="romaji">${p.romaji}</p><p class="reading">${p.reading}</p><button class="listen" data-word="${p.id}">◖)) ฟัง (${p.romaji})</button></article>`}
 function checkoutExample(index,art){return `<div class="checkout-example">${checkoutPicture(art,checkoutRows[index][3])}${checkoutCard(index)}</div>`}
