@@ -1,7 +1,16 @@
 .checkout-number-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
 .checkout-card{min-width:0;background:#fff7e8;border:1px solid #e5d6c5;border-radius:12px;padding:16px;overflow-wrap:anywhere}
 .checkout-card>strong{display:block;font-size:21px}.checkout-card p{margin:6px 0;line-height:1.7}.checkout-card .jp{font-size:25px}.checkout-card .romaji,.checkout-card .reading{font-size:18px}.checkout-card .listen{width:100%;padding:10px 12px;line-height:1.6;font-size:17px;margin-top:10px;white-space:normal}
-.checkout-example{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start;margin:16px 0}.checkout-example>.word-art{margin:0}.checkout-number-grid>.checkout-example{grid-template-columns:minmax(0,1fr);margin:0}.checkout-number-grid>.checkout-example>.word-art{margin:auto}
+.checkout-example{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;align-items:start;margin:16px 0}.checkout-example>.word-art{margin:0}.checkout-number-grid>.checkout-example{grid-template-columns:minmax(0,1fr);margin:0}.checkout-number-grid>.checkout-example>.word-art{margin:auto}
 .checkout-receipt{display:grid;gap:8px;border:1px dashed var(--muted);border-radius:12px;background:white;padding:18px;margin:16px 0;font-size:19px}.checkout-receipt span{display:flex;justify-content:space-between;gap:16px}.checkout-receipt span:last-child{border-top:1px solid var(--line);padding-top:8px}
 #level-three h4{font-size:21px;line-height:1.6;margin:12px 0}#level-three .lesson-note{line-height:1.8;margin-top:16px}#checkout-practice>.word-art{margin:12px auto}#checkout-practice .listen{width:100%;padding:10px 12px;font-size:18px;line-height:1.6;white-space:normal}#checkout-practice .primary{margin-top:14px}#checkout-practice .answer{overflow-wrap:anywhere;line-height:1.6}#checkout-practice [role=status] p{margin:8px 0;line-height:1.7}
 @media(max-width:600px){.checkout-number-grid{grid-template-columns:minmax(0,1fr)}.checkout-example{grid-template-columns:minmax(0,1fr)}.checkout-example>.word-art{margin:auto}}
+
+.checkout-art{width:100%;max-width:200px;aspect-ratio:1;background-image:url('assets/checkout-scenes.webp');background-size:300% 200%;border-radius:10px;border:1px solid #e5d6c5;flex-shrink:0}
+.checkout-price-picture{width:200px;max-width:100%;margin:0 auto 12px;border-radius:10px;background:#fff;border:1px solid #e5d6c5;overflow:hidden}
+.checkout-price-picture .checkout-art{width:100%;border:0;border-radius:0}
+.checkout-price-picture figcaption{text-align:center;font-weight:700;font-size:22px;padding:4px;color:#173d48}
+.checkout-card:after{content:"";display:block;clear:both}
+.checkout-example>.checkout-art{margin:0}.checkout-number-grid>.checkout-example>.checkout-art{margin:auto}
+#checkout-practice>.checkout-art{margin:12px auto}
+@media(max-width:600px){.checkout-example>.checkout-art{margin:auto}.checkout-price-picture,.checkout-art{max-width:190px}}
